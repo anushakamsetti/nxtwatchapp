@@ -21,7 +21,7 @@ import {
 
 const apiStatusConstants = {
     initial: 'INITIAL'
-    success: 'SUSSESS'
+    success: 'SUCCESS'
     failure: 'FAILURE'
     inProgress: 'IN_PROGRESS',
 }
@@ -132,4 +132,4 @@ class GamingVideos extends Component {
      }
 }
 
-export default GamingVideos 
+export default GamingVideos
