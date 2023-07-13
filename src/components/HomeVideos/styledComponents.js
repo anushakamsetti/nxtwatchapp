@@ -20,7 +20,7 @@ export const NoVideosHeading = styled.h1`
    color: ${props => props.headingColor};
 `
 
-export const NoVideoNote = styled.p`
+export const NoVideosNote = styled.p`
    font-family: 'Roboto'
    font-size: 18px;
    color: ${props => props.noteColor};

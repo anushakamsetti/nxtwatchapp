@@ -80,7 +80,7 @@ export const ChannelName = styled.p`
   margin: 0px;
 `
 
-export const ChannelSubscription = styled.p`
+export const ChannelSubscribers = styled.p`
   font-family: 'Roboto';
   font-size: 12px;
   color: ${props => props.color};

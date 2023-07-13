@@ -22,7 +22,7 @@ import {
 } from './styledComponents'
 
 class NavigationBar extends Component {
-  renderTabItem = () => (
+  renderTabItems = () => (
     <ThemeAndVideoContext.Consumer>
       {value => {
         const {isDarkTheme, activeTab, changeTab} = value
@@ -30,7 +30,7 @@ class NavigationBar extends Component {
         const textColor = isDarkTheme ? '#f9f9f9' : '#231f20'
         const activeTabBg = isDarkTheme ? '#475569' : '#cbd5e1'
 
-        const onClickTanHome = () => {
+        const onClickTabHome = () => {
           changeTab('Home')
         }
         const onClickTabTrending = () => {
@@ -128,7 +128,7 @@ class NavigationBar extends Component {
               <NavLink to="/">
                 <AiFillHome
                   size={30}
-                  onClick={onClickTanHome}
+                  onClick={onClickTabHome}
                   color={activeTab === 'Home' ? '#ff0b37' : '#909090'}
                 />
               </NavLink>
@@ -137,6 +137,13 @@ class NavigationBar extends Component {
                   size={30}
                   onClick={onClickTabTrending}
                   color={activeTab === 'Trending' ? '#ff0b37' : '#909090'}
+                />
+              </NavLink>
+              <NavLink to="/gaming">
+                <SiYoutubegaming
+                  size={30}
+                  onClick={onClickTabGaming}
+                  color={activeTab === 'Gaming' ? '#ff0b37' : '#909090'}
                 />
               </NavLink>
               <NavLink to="/saved-videos">

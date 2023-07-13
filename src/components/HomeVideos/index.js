@@ -7,7 +7,7 @@ import {
   VideoCardList,
 } from './styledComponents'
 
-import ThemeAndVideoContext from '../../context/ThemeAndVideoContent'
+import ThemeAndVideoContext from '../../context/ThemeAndVideoContext'
 import HomeVideoCard from '../HomeVideoCard'
 
 const HomeVideos = props => {

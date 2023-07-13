@@ -1,4 +1,4 @@
-import ThemeAndVideoContainer from '../../context/ThermeAndVideoContent'
+import ThemeAndVideoContext from '../../context/ThermeAndVideoContext'
 
 import {
   ItemLink,
@@ -7,14 +7,14 @@ import {
   GamingContentSection,
   GamingTitle,
   GamingViewsAndDate,
-} from './styledComponent'
+} from './styledComponents'
 
 const VideoCard = props => {
   const {videoDetails} = props
   const {id, title, thumbnailUrl, viewCount} = videoDetails
 
   return (
-    <ThemeAndVideoContainer.Consumer>
+    <ThemeAndVideoContext.Consumer>
       {value => {
         const {isDarkTheme} = value
         const textColor = isDarkTheme ? '#f9f9f9' : '#231f20'
@@ -33,7 +33,7 @@ const VideoCard = props => {
           </ItemLink>
         )
       }}
-    </ThemeAndVideoContainer.Consumer>
+    </ThemeAndVideoContext.Consumer>
   )
 }
 

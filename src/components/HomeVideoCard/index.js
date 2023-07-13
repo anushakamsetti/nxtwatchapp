@@ -1,6 +1,6 @@
 import {Link} from 'react-router-dom'
 
-import ThemeAndVideoContext from '../../context/ThemeAndVideoContent'
+import ThemeAndVideoContext from '../../context/ThemeAndVideoContext'
 
 import {
   ListItem,
@@ -10,7 +10,7 @@ import {
   ContentSection,
   Title,
   ChannelName,
-  ViewsAndData,
+  ViewsAndDate,
   Dot,
 } from './styledComponents'
 
@@ -43,9 +43,9 @@ const HomeVideoCard = props => {
                 <ContentSection>
                   <Title color={textColor}>{title}</Title>
                   <ChannelName color={textColor}>{name}</ChannelName>
-                  <ViewsAndData color={textColor}>
+                  <ViewsAndDate color={textColor}>
                     {viewCount} views<Dot> &#8226; </Dot> {publishedAt}
-                  </ViewsAndData>
+                  </ViewsAndDate>
                 </ContentSection>
               </VideoDetails>
             </ListItem>

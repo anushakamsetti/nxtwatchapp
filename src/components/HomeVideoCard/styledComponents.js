@@ -41,7 +41,7 @@ export const ChannelName = styled.p`
   font-size: 15px;
   color: ${props => props.color};
 `
-export const ViewsAndData = styled.p`
+export const ViewsAndDate = styled.p`
   font-family: 'Roboto';
   font-size: 12px;
   color: ${props => props.color};

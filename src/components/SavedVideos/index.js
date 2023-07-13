@@ -2,7 +2,7 @@ import {CgPlayListAdd} from 'react-icons/cg'
 
 import Header from '../Header'
 import NavigationBar from '../NavigationBar'
-import ThemeAndVideoContext from '../../context/ThemeAndVideoContainer'
+import ThemeAndVideoContext from '../../context/ThemeAndVideoContext'
 import VideoCard from '../VideoCard'
 
 import {
@@ -20,7 +20,7 @@ import {
 const SavedVideos = () => (
   <ThemeAndVideoContext.Consumer>
     {value => {
-      const {isDarkTheme, SavedVideos} = value
+      const {isDarkTheme, savedVideos} = value
       const bgColor = isDarkTheme ? '#0f0f0f' : '#f9f9f9'
       const textColor = isDarkTheme ? '#f9f9f9' : '#231f20'
       const headingColor = isDarkTheme ? '#f1f5f9' : '#1e293b'

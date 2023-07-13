@@ -7,7 +7,7 @@ export const HomeContainer = styled.div`
   margin-bottom: 60px;
   overflow-y: auto;
   @media screen and (min-width: 768px) {
-    margin-left: 25px;
+    margin-left: 250px;
     margin-bottom: 0px;
   }
 `

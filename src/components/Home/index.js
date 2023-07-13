@@ -7,7 +7,7 @@ import {AiOutlineClose, AiOutlineSearch} from 'react-icons/ai'
 import Header from '../Header'
 import NavigationBar from '../NavigationBar'
 import ThemeAndVideoContext from '../../context/ThemeAndVideoContext'
-import HomeVideo from '../HomeVideos'
+import HomeVideos from '../HomeVideos'
 import FailureView from '../FailureView'
 
 import {
@@ -16,6 +16,7 @@ import {
     BannerImage,
     BannerText,
     BannerButton,
+    BannerLeftPart,
     BannerRightPart,
     BannerCloseButton,
     SearchContainer,
@@ -25,9 +26,9 @@ import {
 } from './styledComponents'
 
 const apiStatusConstants = {
-    initial: 'INITIAL'
-    success: 'SUCCESS'
-    failure: 'FAILURE'
+    initial: 'INITIAL',
+    success: 'SUCCESS',
+    failure: 'FAILURE',
     inProgress: 'IN_PROGRESS',
 }
 
@@ -44,7 +45,7 @@ class Home extends Component {
     }
 
     getVideos = async () => {
-        const {SearchInput} = this.state 
+        const {searchInput} = this.state 
         this.setState({apiStatus:apiStatusConstants.inProgress})
         const jwtToken = Cookies.get('jwt_token')
         const url = `https://apis.ccbp.in/videos/all?search=${searchInput}`
@@ -61,7 +62,7 @@ class Home extends Component {
                 id: eachVideo.id,
                 title: eachVideo.title,
                 thumbnailUrl: eachVideo.thumbnail_url,
-                viewCount: eachVideo.thumbnail_url,
+                viewCount: eachVideo.view-count,
                 publishedAt: eachVideo.published_at,
                 name: eachVideo.channel.name,
                 profileImageUrl: eachVideo.channel.profile_image_url,
@@ -93,12 +94,12 @@ class Home extends Component {
 
      renderLoadingView = () => (
          <LoaderContainer data-testid="loader">
-            <Loader type="ThemeDots" color="#0b69ff" height="50" width="50" />
+            <Loader type="ThreeDots" color="#0b69ff" height="50" width="50" />
          </LoaderContainer>
      )
 
       renderVideosView = () => {
-         const {gamingVideos} = this.state
+         const {homeVideos} = this.state
          return <HomeVideos homeVideos={homeVideos} onRetry={this.onRetry} />
       }
 
@@ -134,7 +135,7 @@ class Home extends Component {
                         <>
                         <Header />
                         <NavigationBar />
-                        <HomeContainer data-test-d="home" bgColor={bgColor}>
+                        <HomeContainer data-testid="home" bgColor={bgColor}>
                            <BannerContainer data-testid="banner" display={display}>
                              <BannerLeftPart>
                                  <BannerImage 

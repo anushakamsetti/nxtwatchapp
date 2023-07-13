@@ -4,7 +4,7 @@ import {Redirect} from 'react-router-dom'
 
 import {
   AppContainer,
-  FromContainer,
+  FormContainer,
   LoginLogo,
   InputContainer,
   LoginButton,
@@ -116,7 +116,7 @@ class LoginForm extends Component {
     }
     return (
       <AppContainer>
-        <FromContainer>
+        <FormContainer>
           <LoginLogo
             src="https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png"
             alt="website logo"
@@ -125,7 +125,7 @@ class LoginForm extends Component {
           <InputContainer>{this.renderPasswordField()}</InputContainer>
           <LoginButton type="submit">Login</LoginButton>
           {showSubmitError && <SubmitError>*{errorMsg}</SubmitError>}
-        </FromContainer>
+        </FormContainer>
       </AppContainer>
     )
   }
