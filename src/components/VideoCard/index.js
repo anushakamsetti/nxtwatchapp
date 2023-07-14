@@ -1,4 +1,4 @@
-import ThemeAndVideoContext from '../..context/ThemeAndVideoContext'
+import ThemeAndVideoContext from '../../context/ThemeAndVideoContext'
 
 import {
   ItemLink,
@@ -49,7 +49,7 @@ const VideoCard = props => {
                     {name}
                   </TrendingChannelName>
                   <TrendingViewsAndDate color={textColor}>
-                    {viewCount} views<TrendingDot> &#8226;</TrendingDot>
+                    {viewCount} views<TrendingDot> &#8226; </TrendingDot>
                     {publishedAt}
                   </TrendingViewsAndDate>
                 </TrendingContentSection>

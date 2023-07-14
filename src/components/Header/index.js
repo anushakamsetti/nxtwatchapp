@@ -26,7 +26,7 @@ import {
 const Header = props => (
   <ThemeAndVideoContext.Consumer>
     {value => {
-      const {isDartTheme, toggleTheme} = value
+      const {isDarkTheme, toggleTheme} = value
       const color = isDarkTheme ? '#ffffff' : '#00306c'
       const bgColor = isDarkTheme ? '#231f20' : '#f1f5f9'
 
@@ -45,7 +45,7 @@ const Header = props => (
           <LogoLink to="/">
             <HeaderLogo
               src={
-                isDartTheme
+                isDarkTheme
                   ? 'https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-dark-theme-img.png'
                   : 'https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png'
               }
@@ -58,7 +58,7 @@ const Header = props => (
               data-testid="theme"
               onClick={onChangeTheme}
             >
-              {isDartTheme ? (
+              {isDarkTheme ? (
                 <BsBrightnessHigh color="#ffffff" size={25} />
               ) : (
                 <BsMoon size={25} />

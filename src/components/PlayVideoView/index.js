@@ -1,9 +1,9 @@
 import ReactPlayer from 'react-player'
 
-import {AiOutlineLink, AiOutlineDislike} from 'react-icons/ai'
+import {AiOutlineLike, AiOutlineDislike} from 'react-icons/ai'
 import {BiListPlus} from 'react-icons/bi'
 
-import ThemeAndVideoContext from '../../context/ThemeAndVideoContainer'
+import ThemeAndVideoContext from '../../context/ThemeAndVideoContext'
 
 import {
   VideoPlayer,
@@ -65,7 +65,7 @@ const PlayVideoView = props => {
             <PlayVideoStatusContainer>
               <PlayVideoStatus color={textColor}>
                 {videoDetails.viewCount} views
-                <PlayVideoDot> &#8226</PlayVideoDot>
+                <PlayVideoDot> &#8226; </PlayVideoDot>
                 {videoDetails.publishedAt}
               </PlayVideoStatus>
               <PlaySocialButtonsContainer>
@@ -75,7 +75,7 @@ const PlayVideoView = props => {
                     color={isLiked ? '#2563eb' : '#64748b'}
                     onClick={onClickLike}
                   >
-                    <AiOutlineLink size={25} />
+                    <AiOutlineLike size={25} />
                     <ButtonText>Like</ButtonText>
                   </SocialButton>
                 </BtnContainer>
@@ -83,10 +83,10 @@ const PlayVideoView = props => {
                   <SocialButton
                     type="button"
                     color={isDisLiked ? '#2563eb' : '#64748b'}
-                    onClick={onClickDisLike}
+                    onClick={onClickDislike}
                   >
-                    <AiOutlineDisLink size={25} />
-                    <ButtonText>DisLike</ButtonText>
+                    <AiOutlineDislike size={25} />
+                    <ButtonText>Dislike</ButtonText>
                   </SocialButton>
                 </BtnContainer>
                 <BtnContainer>

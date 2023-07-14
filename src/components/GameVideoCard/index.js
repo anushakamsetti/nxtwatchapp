@@ -1,4 +1,4 @@
-import ThemeAndVideoContext from '../../context/ThermeAndVideoContext'
+import ThemeAndVideoContext from '../../context/ThemeAndVideoContext'
 
 import {
   ItemLink,
@@ -7,7 +7,7 @@ import {
   GamingContentSection,
   GamingTitle,
   GamingViewsAndDate,
-} from './styledComponents'
+} from './styledComponent'
 
 const VideoCard = props => {
   const {videoDetails} = props

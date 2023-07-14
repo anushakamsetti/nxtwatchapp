@@ -10,10 +10,10 @@ export const TrendingListItem = styled.li`
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-self: center;
+  margin-bottom: 20px;
   @media screen and (min-width: 768px) {
-    width: 280px;
-    margin-right: 20px;
+    flex-direction: row;
+    padding-left: 40px;
   }
 `
 export const TrendingThumbNailImage = styled.img`
@@ -22,12 +22,12 @@ export const TrendingThumbNailImage = styled.img`
     width: 300px;
   }
 `
-export const TradingVideoDetails = styled.div`
+export const TrendingVideoDetails = styled.div`
   display: flex;
   justify-content: flex-start;
   width: 100%;
 `
-export const TradingProfileImage = styled.img`
+export const TrendingProfileImage = styled.img`
   width: 30px;
   height: 30px;
   border-radius: 50px;
@@ -55,7 +55,7 @@ export const TrendingChannelName = styled.p`
   font-size: 15px;
   color: ${props => props.color};
 `
-export const TrendingViewsAndData = styled.p`
+export const TrendingViewsAndDate = styled.p`
   font-family: 'Roboto';
   font-size: 12px;
   color: ${props => props.color};

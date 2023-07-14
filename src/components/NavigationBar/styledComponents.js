@@ -58,7 +58,7 @@ export const ContactHeading = styled.p`
   color: ${props => props.color};
 `
 
-export const ContactIcon = styled.div`
+export const ContactIcons = styled.div`
   display: flex;
   align-items: center;
 `
